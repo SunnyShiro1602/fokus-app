@@ -1,0 +1,60 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<main>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a1f3c">
+<link rel="manifest" href="manifest.json">
+  <h1>Willkommen in der Fokus Ecke.</h1>
+  <h2>Timer starten</h2>
+
+  <div class="timer-wrapper">
+    <div class="museum-timer">
+      <span id="timeDisplay">25:00</span>
+    </div>
+
+    <div class="timer-controls">
+      <input type="number" id="zeit" value="25" min="5" max="120" step="5">
+      <button id="startButton">⭐️ Start</button>
+       <button id="continueButton">▶️ Weiter</button>
+      <button id="pauseButton">⏸️ Pause</button>
+      <button id="resetButton">🔄 Reset</button>
+    </div>
+  </div>
+
+  <h3>🎻 Musiksteuerung</h3>
+  <audio id="musik" 
+         src="https://dl.dropbox.com/scl/fi/vq54itnkokhv9rq9wg3pi/classical-violin-129650.mp3?rlkey=o1ncbb5fs8xd6db1x64bcv5c8&st=6fpdxk2e&dl=0" 
+         preload="auto" 
+         loop>
+  </audio>
+  <div class="audio-controls">
+    <button id="musikButton">▶️ Play</button>
+    <button id="stop">⏹️ Stop</button>
+    <button id="lauter">🔊 Lauter</button>
+    <button id="leiser">🔉 Leiser</button>
+  </div>
+  
+  <!-- 🌧️ Geräuschkulisse Buttons -->
+<h2>Umgebungsgeräusche</h2>
+<button id="regenBtn">🌧️ Regen</button>
+<button id="gewitterBtn">⚡ Gewitter</button>
+<button id="stadtBtn">🏙️ Stadt</button>
+<button id="museumBtn">🏛️ Museum</button>
+
+<!-- 🔈 Audioelemente -->
+<audio id="regen" src="https://dl.dropboxusercontent.com/scl/fi/0sqbpsk4p028v8mtuisht/regen-04-75060.mp3?rlkey=89sdpviybqsyvxr45d2d9er7x" loop preload="auto"></audio>
+<audio id="gewitter" src="https://dl.dropboxusercontent.com/scl/fi/htzz5yminug04iui93qh8/peals-of-thunder-191992.mp3?rlkey=afy1wxkx2e0j44x8somzm4jtq" loop preload="auto"></audio>
+<audio id="stadt" src="https://dl.dropboxusercontent.com/scl/fi/1665ucwdenk9s0r2o8yi6/city-noise-30537.mp3?rlkey=sllt3q0tz7mgw7qnbwasoafn4" loop preload="auto"></audio>
+<audio id="museum" src="https://dl.dropboxusercontent.com/scl/fi/ha9ibue38lb4xwxyx3x6e/walking-around-and-out-of-busy-exhibition-in-tate-britain-50288.mp3?rlkey=ok90549pwsqzsme231ju77dq6" preload="auto" loop></audio>
+  <h3>✨ Motivation</h3>
+  <button id="testNervi">✨ ADHS</button>
+  <button id="sherlockBtn">🐾Sherlock</button>
+</main>
+
+<!-- Nervi-Box unten links -->
+<div id="nervi" class="nervi hidden">
+  <div class="bubble">✨ Du schaffst das!</div>
+</div>
+
+<div id="sherlock" class="nervi hidden">
+  <div class="bubble">🐾 Trink was!</div>
+</div>

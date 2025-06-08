@@ -1,0 +1,182 @@
+/* 🎨 Hintergrund & Grundlayout */
+body {
+  background-image: url("https://images.streaming-inference.models.runwayml.cloud/streams-server-cpu/raw_image/commands/compressed_image/result.jpg?input_image=https%3A%2F%2Fdnznrvs05pmza.cloudfront.net%2Fac6e5077-d19b-404d-b537-775957a77266.png%3F_jwt%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMGRhYWE0ZGRkMDc3NDNmMiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0OTUxMzYwMH0.vhAbVPd7kcX580JZFsAzIcCVWiMEspsNmw6kKp14gx4&input_max_width=1920&input_max_height=1920&hardware=cpu&priority=high&tok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDAxNDg4MzEsImVtYWlsIjoiYXdvbGZmZ3JhbW0xQGdtYWlsLmNvbSIsImV4cCI6MTc1MTk2Mzk0Ny4zNTUsImlhdCI6MTc0OTM3MTk0Ny4zNTUsInNzbyI6ZmFsc2V9.6IF-Ij-WsUINLGh21JnSnp6ptpeyWFf1UeJ8sWMt4UQ");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Arial", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧱 Hauptbereich */
+main {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  max-width: 700px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+/* ⏳ Timer */
+.timer-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.museum-timer {
+  background: rgba(44, 62, 80, 0.9);
+  color: #ecf5ff;
+  font-size: 3em;
+  padding: 20px 40px;
+  border-radius: 15px;
+  border: 2px solid #cce0f7;
+  box-shadow: 0 0 10px #a8cfff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 15px;
+}
+
+/* ⏲️ Timer Eingabe + Buttons */
+.timer-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.timer-controls input[type="number"],
+.timer-controls button {
+  padding: 8px 16px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Georgia', serif;
+}
+
+.timer-controls input[type="number"] {
+  background-color: #ecf5ff;
+  border: 2px solid #2c3e50;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.timer-controls button {
+  background-color: #2c3e50;
+  color: #ecf5ff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.timer-controls button:hover {
+  background-color: #1a242f;
+}
+
+/* 🎧 Audio Buttons */
+.audio-controls {
+  text-align: flex-end;
+  margin-top: 15px;
+}
+
+.audio-controls button {
+  margin: 5px;
+  padding: 6px 12px;
+  font-size: 1em;
+}
+
+/* ✨ Bubble & Figuren */
+#nervi, #sherlock {
+  position: absolute;
+  z-index: 999;
+  transition: opacity 0.5s ease-in-out;
+  animation: floatyStar 3.5s ease-in-out infinite;
+}
+
+#nervi {
+  bottom: 200px;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+#sherlock {
+  bottom: 70px;
+  left: 75%;
+  transform: translateX(-50%);
+}
+
+.bubble {
+  position: relative;
+  padding: 12px 18px;
+  font-size: 0.9em;
+  border-radius: 25px;
+  font-family: 'Comic Sans MS', cursive;
+  box-shadow: 0 0 6px 2px #f0c3ff, 0 0 10px 4px #ffccff;
+  animation: glitter-border 3s infinite ease-in-out;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Farben: Nervi rosa, Sherlock blau */
+#nervi .bubble {
+  background: linear-gradient(135deg, #ffe6f0, #fbeaff);
+  color: #5a3e36;
+}
+
+#sherlock .bubble {
+  background: linear-gradient(135deg, #0a1f3c, #102b57);
+  color: #e6f0ff;
+  border: 2px solid #5c7ca3;
+  box-shadow: 0 0 6px 2px #0a1f3c, 0 0 12px 4px rgba(173, 216, 230, 0.2);
+  font-family: 'Georgia', serif;
+}
+
+/* ✨ Animationen */
+@keyframes glitter-border {
+  0%, 100% {
+    box-shadow: 0 0 6px 2px #f0c3ff, 0 0 10px 4px #ffccff;
+  }
+  50% {
+    box-shadow: 0 0 12px 4px #ffd6ff, 0 0 20px 6px #ffe6ff;
+  }
+}
+
+@keyframes floatyStar {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* 🔒 Bubble verstecken */
+.hidden {
+  display: none;
+}
+
+/* 📱 Mobilfreundlich */
+@media (max-width: 600px) {
+  main {
+    margin: 10px;
+  }
+
+  .museum-timer {
+    font-size: 2em;
+  }
+
+  .timer-controls input,
+  .timer-controls button {
+    flex: 1 1 100px;
+    min-width: 80px;
+  }
+
+  .bubble {
+    font-size: 0.9rem;
+  }
+
+  #nervi, #sherlock {
+    transform: scale(0.9);
+    bottom: 30px;
+  }
+}
